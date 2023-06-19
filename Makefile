@@ -6,7 +6,7 @@
 #    By: vchulkai <vchulkai@42student.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 14:51:37 by vchulkai          #+#    #+#              #
-#    Updated: 2023/06/19 10:42:24 by vchulkai         ###   ########.fr        #
+#    Updated: 2023/06/19 16:12:45 by vchulkai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,9 @@ OBJS =  lst_util1.o\
 		instruction.o\
 		instruction2.o\
 
-%o: %c
+INC = push_swap.h
+
+%o: %c $(INC)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
